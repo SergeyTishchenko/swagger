@@ -28,8 +28,7 @@ class swagg_api_test(object):
         method = '/user/logout'
         response = requests.get(test_data[0] + method)
         assert response.status_code == 200, 'Unexpected response code!'
-        assert not response.content, 'Response body is not empty!'
-
+       
     def user_delete(self, test_data):
         method = '/user/{0}'.format(test_data[2]['username'])
         response = requests.delete(test_data[0] + method)
